@@ -40,4 +40,4 @@ class Agent:
     
 if __name__ == '__main__': 
      print("hellow")
-     agent = Agent(lr=0.001, gamma=0.9, epsStart=1.0, epsEnd=0.01, epsDec=0.9999995, nActions=4, nStates=16)
+     agent = Agent(lr=0.001, gamma=0.9, epsStart=1.0, epsEnd=0.01, epsDec=0.9999996, nActions=4, nStates=16)
