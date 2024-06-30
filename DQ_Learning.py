@@ -142,6 +142,7 @@ class Agent():
         self.Q.optimizer.zero_grad()
         loss.backward()
         self.Q.optimizer.step()
+        self.decrement_gamma()
         
 if __name__ == "__main__":         
    
