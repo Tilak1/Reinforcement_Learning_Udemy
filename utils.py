@@ -20,7 +20,7 @@ def plot_learning_curve(x,scores,epsilon,filename):
     ax.tick_params(axis='y',colors = "C0")
 
     N = len(scores)
-    running_avg = np.empty()
+    running_avg = np.empty(N)
     
     # plotting from 1st to last 100 points of scores - byt getting the avg of these 100's  of data points 
     # Ex: y = 50 -> 0:51 

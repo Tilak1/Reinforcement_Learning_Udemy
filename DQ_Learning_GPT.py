@@ -101,9 +101,9 @@ if __name__ == "__main__":
         agent.decrement_epsilon()
 
         if i % 100 == 0:
-            avg_score = np.mean(scores[-100:])
+            avg_score = np.mean(scores[-100:]) # last 100 of the scores 
             print(f'episode {i} score {score:.1f} avg score {avg_score:.1f} epsilon {agent.epsilon:.2f}')
 
     filename = 'cartpole_dqn.png'
-    x = [i + 1 for i in range(n_games)]
+    x = [i + 1 for i in range(n_games)] # list of all the numbers uptill n_games 
     plot_learning_curve(x, scores, eps_history, filename)
