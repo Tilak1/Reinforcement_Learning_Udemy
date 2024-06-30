@@ -15,6 +15,6 @@ if __name__ == '__main__':
         observation = env.reset()
         score = 0 
         while not done: 
-            action = agent.
+            action = agent.choose_action
 
 
