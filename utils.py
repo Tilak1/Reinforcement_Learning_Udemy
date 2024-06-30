@@ -8,7 +8,7 @@ def plot_learning_curve(x,scores,epsilon,filename):
     
     fig = plt.figure()
     ax = fig.add_subplot(111,label = "1")
-    ax2 = fig.add_subplot(111,label = "2", frame_one=False)
+    ax2 = fig.add_subplot(111,label = "2", frame_on=False)
     
     
     # epislon plot 
