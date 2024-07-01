@@ -27,15 +27,25 @@ def plot_learning_curve(x,scores,epsilon,filename):
     # Ex: y = 400 -> 300:401 
 
     for y in range(N): 
-        running_avg = np.mean(scores[max(0,y-100):y+1])
+        running_avg[y] = np.mean(scores[max(0,y-100):y+1])
         
     
-    ax2.scatter(x,running_avg,color = "C1")
-    ax2.axes.get_xaxis().set_visible(False)
-    ax2.set_ylabel('Scote',color = "C1")
+    ax2.plot(x,running_avg,color = "C1") # changed scatter to plot 
+    #ax2.axes.get_xaxis().set_visible(False)
+    ax2.yaxis.tick_right()
+    ax2.set_ylabel('Score',color = "C1")
     ax2.yaxis.set_label_position('right')
     ax2.tick_params(axis='y',colors = "C1")
+    ax2.axes.get_xaxis().set_visible(False)
     
     plt.savefig(filename)
 
+
+# Example usage
+# x = np.arange(0, 100)
+# scores = np.random.randn(100).cumsum()  # Example scores data
+# epsilon = np.linspace(1.0, 0.01, 100)  # Example epsilon data
+# filename = 'learning_curve.png'
+
+# plot_learning_curve(x, scores, epsilon, filename)
         
