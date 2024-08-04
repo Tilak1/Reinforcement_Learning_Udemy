@@ -25,7 +25,7 @@ class LinearDeepQNetwork(nn.Module): #inheriting nn.module helps with self.param
         self.optimizer = optim.Adam(self.parameters(),lr=lr)
         
         self.loss = nn.MSELoss()
-        self.device = T.device('cud:0' if T.cuda.is_available() else 'cpu')
+        self.device = T.device('cuda:0' if T.cuda.is_available() else 'cpu')
         
         #sending entire network to device 
         self.to(self.device)
