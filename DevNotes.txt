@@ -1,2 +1,3 @@
 Using pytorch_env for running actor critic methods and training. Submitting a job in slurm aka express nodes, even for running tests is the way forward. Don't use the login node for any kind of test runs. 
 
+Test push - from local machine
